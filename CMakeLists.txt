@@ -1,4 +1,3 @@
-cat > CMakeLists.txt <<'EOF'
 cmake_minimum_required(VERSION 3.10)
 project(RPGGame)
 
@@ -10,5 +9,5 @@ enable_testing()
 add_executable(rpg_game
     src/main.cpp
     src/Game.cpp
+    src/Player.cpp
 )
-EOF
