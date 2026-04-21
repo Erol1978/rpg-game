@@ -13,13 +13,17 @@ int main() {
 
     while (running) {
         displayMenu();
+
         cin >> choice;
 
         if (choice == 1) {
             cout << "Game started!" << endl;
+            game.start(); // eğer varsa
         }
         else if (choice == 2) {
-            cout << "Player HP: " << game.getPlayer().getHealth() << endl;
+            cout << "Player HP: " 
+                 << game.getPlayer().getHealth() 
+                 << endl;
         }
         else if (choice == 3) {
             running = false;
@@ -37,5 +41,4 @@ void displayMenu() {
     cout << "1. Start Game" << endl;
     cout << "2. Show Stats" << endl;
     cout << "3. Quit" << endl;
-    cout << "Choice: ";
 }
